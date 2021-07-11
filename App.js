@@ -1,21 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Expo from 'expo';
+import React, { Component } from 'react';
+import * as THREE from "three";
+import ExpoTHREE from "expo-three"
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+export default class App extends Component {  
+  render() {    
+     return(       
+        <Expo.GLView           
+        style={{ flex: 1 }}           
+        onContextCreate={this._onGLContextCreate}/>    
+        )
+    }
+}
+_onGLContextCreate = async (gl) => {
+  // Here is where we will define our scene, camera and renderer
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
