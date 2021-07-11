@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "AwesomeAR",
+    "slug": "AwesomeAR",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "AwesomeAR"
+}
